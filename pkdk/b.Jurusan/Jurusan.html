@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel 5 Gambar</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .carousel {
+        position: relative;
+        width: 80%;
+        max-width: 1000px;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slide {
+        min-width: 100%;
+        display: flex;
+        background: white;
+      }
+
+      .slide img {
+        width: 50%;
+        object-fit: cover;
+      }
+
+      .slide-content {
+        width: 50%;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .slide-content h2 {
+        margin: 0 0 15px;
+      }
+
+      .slide-content p {
+        margin: 0 0 20px;
+        color: #444;
+      }
+
+      .btn {
+        background: #007bff;
+        color: white;
+        padding: 12px 20px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        width: fit-content;
+      }
+
+      /* tombol panah */
+      .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: white;
+        font-size: 24px;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+
+      .carousel-btn.left {
+        left: 15px;
+      }
+      .carousel-btn.right {
+        right: 15px;
+      }
+
+      /* indikator */
+      .carousel-indicators {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+      }
+
+      .indicator {
+        width: 12px;
+        height: 12px;
+        background: #bbb;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .indicator.active {
+        background: #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="slide">
+          <img src="https://picsum.photos/id/1015/600/400" alt="Slide 1" />
+          <div class="slide-content">
+            <h2>Judul Slide 1</h2>
+            <p>Deskripsi singkat dari slide pertama.</p>
+            <a href="#" class="btn">Selengkapnya</a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="https://picsum.photos/id/1024/600/400" alt="Slide 2" />
+          <div class="slide-content">
+            <h2>Judul Slide 2</h2>
+            <p>Deskripsi singkat dari slide kedua.</p>
+            <a href="#" class="btn">Selengkapnya</a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="https://picsum.photos/id/1032/600/400" alt="Slide 3" />
+          <div class="slide-content">
+            <h2>Judul Slide 3</h2>
+            <p>Deskripsi singkat dari slide ketiga.</p>
+            <a href="#" class="btn">Selengkapnya</a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="https://picsum.photos/id/1040/600/400" alt="Slide 4" />
+          <div class="slide-content">
+            <h2>Judul Slide 4</h2>
+            <p>Deskripsi singkat dari slide keempat.</p>
+            <a href="#" class="btn">Selengkapnya</a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="https://picsum.photos/id/1050/600/400" alt="Slide 5" />
+          <div class="slide-content">
+            <h2>Judul Slide 5</h2>
+            <p>Deskripsi singkat dari slide kelima.</p>
+            <a href="#" class="btn">Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-btn left">&#10094;</button>
+      <button class="carousel-btn right">&#10095;</button>
+
+      <div class="carousel-indicators">
+        <div class="indicator active"></div>
+        <div class="indicator"></div>
+        <div class="indicator"></div>
+        <div class="indicator"></div>
+        <div class="indicator"></div>
+      </div>
+    </div>
+
+    <script>
+      const track = document.querySelector(".carousel-track");
+      const slides = Array.from(track.children);
+      const nextButton = document.querySelector(".carousel-btn.right");
+      const prevButton = document.querySelector(".carousel-btn.left");
+      const indicators = document.querySelectorAll(".indicator");
+
+      let currentIndex = 0;
+
+      function updateSlide(index) {
+        track.style.transform = "translateX(-" + index * 100 + "%)";
+        indicators.forEach((dot, i) => {
+          dot.classList.toggle("active", i === index);
+        });
+      }
+
+      nextButton.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlide(currentIndex);
+      });
+
+      prevButton.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlide(currentIndex);
+      });
+
+      indicators.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+          currentIndex = i;
+          updateSlide(currentIndex);
+        });
+      });
+    </script>
+  </body>
+</html>

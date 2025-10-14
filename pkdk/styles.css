@@ -1,0 +1,644 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #e9e9e9;
+  color: #333;
+}
+
+.header {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a365d;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1a365d;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0066cc;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  content: "▼";
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: #1a365d;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-toggle::after {
+  content: "▶";
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.dropdown-submenu .dropdown-content {
+  left: 100%;
+  top: 0;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.dropdown-submenu:hover .dropdown-content {
+  display: block;
+}
+
+.search-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #2e9c4a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: white;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 65, 135, 0.753), rgba(23, 98, 179, 0.226)),
+    url("/image/pexels-njeromin-15036815.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero-content {
+  width: 50%;
+  color: white;
+  padding-right: 2rem;
+}
+
+.hero h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.hero-image {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #1a365d;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .hero-content {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .hero-image {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+}
+
+.section {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  background: linear-gradient(rgba(0, 65, 135, 0), rgba(23, 98, 179, 0)),
+    url("/image/backgroundnetika.jpg") no-repeat center center;
+  background-size: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container-h2 {
+  color: #0a192f;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #004287;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  flex: 1;
+  min-width: 250px;
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.24);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  width: 70px;
+  height: 70px;
+  background-color: #004287;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin: 0 auto 1rem;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #004287;
+}
+
+.card p {
+  color: #666;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Stats Bar */
+.stats-bar {
+  background-color: #004287;
+  color: #deebff;
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 4px solid #0066cc;
+}
+
+.stats-bar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.stat {
+  flex: 1;
+  min-width: 200px;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-decoration: underline 2px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.footer {
+  background-color: #0a192f;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: Arial, sans-serif;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid white;
+  padding-bottom: 10px;
+}
+
+.footer-section p {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    padding: 0;
+  }
+
+  .social-icons {
+    align-items: center;
+  }
+}
+
+.page-content {
+  max-width: 900px;
+  margin: 0 auto; /* Centers the content on the page */
+}
+
+/* The dark blue title banner */
+.title-banner {
+  background-color: #0a4b8c; /* Dark blue from the image */
+  color: #ffffff; /* White text */
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.title-banner h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* The main content area with the text */
+.main-article {
+  padding: 60px;
+  background-color: #f6f5f3; /* Same light gray as the body */
+}
+
+.main-article p,
+.main-article li {
+  font-size: 1.1rem; /* Slightly larger for readability */
+  line-height: 1.7; /* Generous spacing between lines */
+  color: #333333; /* Dark gray for text, softer than pure black */
+}
+
+.main-article p {
+  margin-top: 0;
+  margin-bottom: 1.5em; /* Space between paragraphs */
+}
+
+.main-article ol {
+  padding-left: 25px; /* Indent the list */
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+.main-article li {
+  margin-bottom: 0.5em; /* Space between list items */
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px; /* Padding samping untuk layar kecil */
+}
+
+/* Bagian Struktur Organisasi */
+.org-structure-section {
+  background-color: #143768; /* Biru gelap yang solid */
+  padding: 80px 0;
+  text-align: center; /* Semua konten di tengah */
+}
+
+.org-structure-section h2 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #fff; /* Teks putih */
+  margin-bottom: 50px; /* Jarak antara judul dan gambar */
+}
+
+.org-structure-section img {
+  max-width: 90%; /* Gambar responsif, tidak lebih dari 90% lebar container */
+  height: auto; /* Mempertahankan rasio aspek */
+  display: block; /* Menghilangkan spasi ekstra di bawah gambar */
+  margin: 0 auto; /* Menengahkan gambar */
+}
+
+/* Media Queries untuk Responsivitas (opsional, tapi disarankan) */
+
+@media (max-width: 480px) {
+  .vision-mission-section h1 {
+    font-size: 1.8em;
+  }
+  .org-structure-section h2 {
+    font-size: 1.8em;
+  }
+}
+
+.visi-misi-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* biar full tinggi layar */
+  background: url("/image/visimisi.png") no-repeat center center;
+  background-size: cover; /* biar gambar nutup full */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visi-misi-section .overlay {
+  background: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* opsional: transparansi gelap di atas gambar */
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.visi-misi-section h2 {
+  color: #fff;
+  font-size: 36px;
+  text-align: center;
+}
+
+/* Layout umum */
+.tjkt-page {
+  background: url("bg-smkn3.png") no-repeat center center fixed;
+  background-size: cover;
+  padding: 2rem 10%;
+  color: #0f172a;
+  font-family: "Inter", sans-serif;
+}
+
+/* Section 1 - Deskripsi */
+.tjkt-desc .desc-box {
+  background: #0f172a;
+  color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  max-width: 750px;
+  margin: 2rem auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tjkt-desc h3 {
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.tjkt-desc ul {
+  margin-left: 1rem;
+  line-height: 1.8;
+}
+
+/* Section 2 - Fasilitas */
+.tjkt-lab {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.lab-image img {
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.lab-text {
+  flex: 1;
+}
+
+.lab-text h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.lab-text ul {
+  margin-left: 1.2rem;
+  line-height: 1.7;
+}
+
+/* Section 3 - Guru */
+.tjkt-staff {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.tjkt-staff h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.staff-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.staff-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.staff-item {
+  background: #0f172a;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.highlight {
+  background: #0f172a;
+  font-weight: 600;
+}
+
+.small {
+  font-size: 0.85rem;
+}
