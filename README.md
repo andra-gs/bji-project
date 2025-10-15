@@ -1,4 +1,4 @@
-# Nama Proyek
+# BJI CORP
 
 Deskripsi singkat tentang proyek Anda. Jelaskan fungsi utama dan manfaatnya.
 
@@ -12,3 +12,9 @@ Deskripsi singkat tentang proyek Anda. Jelaskan fungsi utama dan manfaatnya.
 1. Clone repositori ini:
    ```bash
    git clone https://github.com/username/nama-proyek.git
+
+2. Catat:
+    ```bash
+   <p>jmbt di kpl</p>
+   
+[Jangan Lupa Nonton YT](https://www.youtube.com/)
