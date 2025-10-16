@@ -583,6 +583,8 @@ footer {
   width: 400px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-top-right-radius: 32%;
+  border-bottom-right-radius: 32%;
 }
 
 .lab-text {
@@ -805,3 +807,25 @@ tr:hover {
         word-break: break-word;
     }
 }
+
+.tjkt-desc {
+    background-image: url('/image/');
+    background-size: cover;
+    background-position: center;
+    padding: 60px;
+}
+
+.tjkt-lab {
+    background-image: url('/image/');
+    background-size: cover;
+    background-position: center;
+    padding: 60px;
+}
+
+.tjkt-staff {
+    background-image: url('/image/');
+    background-size: cover;
+    background-position: center;
+    padding: 60px;
+}
+
