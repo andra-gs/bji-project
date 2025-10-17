@@ -1,8 +1,8 @@
 # BJI CORP
 Target Selesai akhir bulan November
-[]Halaman Utama
-[]Jurusan
-[x]Forum
+- [ ]Halaman Utama
+- [ ]Jurusan
+- [x]Forum
 
 ## Fitur Utama
 - Tambah item baru dengan tombol +
