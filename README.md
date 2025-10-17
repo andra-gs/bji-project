@@ -1,6 +1,8 @@
 # BJI CORP
-
-Deskripsi singkat tentang proyek Anda. Jelaskan fungsi utama dan manfaatnya.
+Target Selesai akhir bulan November
+[]Halaman Utama
+[]Jurusan
+[x]Forum
 
 ## Fitur Utama
 - Tambah item baru dengan tombol +
