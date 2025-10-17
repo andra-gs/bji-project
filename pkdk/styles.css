@@ -809,23 +809,24 @@ tr:hover {
 }
 
 .tjkt-desc {
-    background-image: url('/image/');
+    background-image: url('/image/backgroundnetika.jpg');
     background-size: cover;
     background-position: center;
     padding: 60px;
 }
 
 .tjkt-lab {
-    background-image: url('/image/');
+    background-image: url('/image/backgroundnetika.jpg');
     background-size: cover;
     background-position: center;
     padding: 60px;
 }
 
 .tjkt-staff {
-    background-image: url('/image/');
+    background-image: url('/image/backgroundnetika.jpg');
     background-size: cover;
     background-position: center;
     padding: 60px;
 }
+
 
