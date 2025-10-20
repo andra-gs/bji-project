@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -828,5 +829,6 @@ tr:hover {
     background-position: center;
     padding: 60px;
 }
+
 
 
