@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Management Perkantoran</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header and Navigation -->
+    <header class="header">
+      <div class="navbar">
+        <div class="logo">
+          <img
+            src="/image/logo_netika-removebg-preview.png"
+            alt="SMK Negeri 3 Karawang Logo"
+          />
+          <div>
+            <h1>SMK Negeri 3<br />Karawang</h1>
+          </div>
+        </div>
+        <div class="nav-links">
+          <div class="dropdown">
+            <a href="../index.html">Beranda</a>
+            <div class="dropdown-content">
+              <a href="../index.html#visi-misi-struktur pattern-bg">Visi & Misi</a>
+              <a href="../index.html#visi-misi-struktur pattern-bg">Struktur Organisasi</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="tes.html" class="dropdown-toggle">Jurusan</a>
+            <div class="dropdown-content">
+              <a href="Tkj.html">Teknik jaringan Konputer dan Telekomunikasi</a>
+              <a href="tav.html">Teknik Audio Vidio</a>
+              <a href="tsm.html">Teknik Sepeda Motor</a>
+              <a href="mp.html">Management Perkantoran</a>
+              <a href="akl.html">Akutansi</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a class="dropdown-toggle">Forum</a>
+            <div class="dropdown-content">
+              <a href="../c.Forum/OSIS.html">OSIS</a>
+              <a href="../c.Forum/MPK.html">MPK</a>
+              <a href="../c.Forum/eskul.html">Eskul</a>
+            </div>
+          </div>
+          <a href="../Kegiatan.html">Kegiatan</a>
+          <a href="../market.html">Mart</a>
+
+          <div class="dropdown">
+            <a href="../index.php">Aspirasi</a>
+          </div>
+        </div>
+        <div class="search-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 5 1.42-1.42-5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <center>
+      <section class="section">
+        <div class="carousel">
+          <div class="carousel-track">
+            <div class="slide">
+              <img src="https://picsump.hotos/id/1015/600/400" alt="Slide 1" />
+              <div class="slide-content">
+                <h2>Teknik Jaringan Komputer dan Telekomunikasi</h2>
+                <p>Merancang Jaringan, Menghubungkan Masa Depan.</p>
+                <a href="Tkj.html" class="btn">Selengkapnya</a>
+              </div>
+            </div>
+
+            <div class="slide">
+              <img src="https://picsum.photos/id/1024/600/400" alt="Slide 2" />
+              <div class="slide-content">
+                <h2>Teknik Audio Vidio</h2>
+                <p>From Mixing Desk to Visual Spectacle.</p>
+                <a href="tav.html" class="btn">Selengkapnya</a>
+              </div>
+            </div>
+
+            <div class="slide">
+              <img src="https://picsum.photos/id/1032/600/400" alt="Slide 3" />
+              <div class="slide-content">
+                <h2>Teknik Bisnis Sepeda Motor</h2>
+                <p>Engine Masters, Business Minds.</p>
+                <a href="tsm.html" class="btn">Selengkapnya</a>
+              </div>
+            </div>
+
+            <div class="slide">
+              <img src="https://picsum.photos/id/1040/600/400" alt="Slide 4" />
+              <div class="slide-content">
+                <h2>Menegement Perkantoran</h2>
+                <p>The Organized Mind, The Backbone of Business.</p>
+                <a href="mp.html" class="btn">Selengkapnya</a>
+              </div>
+            </div>
+
+            <div class="slide">
+              <img src="https://picsum.photos/id/1050/600/400" alt="Slide 5" />
+              <div class="slide-content">
+                <h2>Akuntansi dan Keuangan Lembaga</h2>
+                <p>We Speak Fluently in Numbers.</p>
+                <a href="akl.html" class="btn">Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-btn left">&#10094;</button>
+          <button class="carousel-btn right">&#10095;</button>
+
+          <div class="carousel-indicators">
+            <div class="indicator active"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+          </div>
+        </div>
+
+        <script>
+          const track = document.querySelector(".carousel-track");
+          const slides = Array.from(track.children);
+          const nextButton = document.querySelector(".carousel-btn.right");
+          const prevButton = document.querySelector(".carousel-btn.left");
+          const indicators = document.querySelectorAll(".indicator");
+
+          let currentIndex = 0;
+
+          function updateSlide(index) {
+            track.style.transform = "translateX(-" + index * 100 + "%)";
+            indicators.forEach((dot, i) => {
+              dot.classList.toggle("active", i === index);
+            });
+          }
+
+          nextButton.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlide(currentIndex);
+          });
+
+          prevButton.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlide(currentIndex);
+          });
+
+          indicators.forEach((dot, i) => {
+            dot.addEventListener("click", () => {
+              currentIndex = i;
+              updateSlide(currentIndex);
+            });
+          });
+        </script>
+      </section>
+    </center>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-section">
+        <h3>Alamat</h3>
+        <p><strong>SMKN 3 KARAWANG:</strong> Perumahan</p>
+        <p>Griya Kondang Asri, Kondangjaya,</p>
+        <p>Kec. Karawang Timur, Kab.</p>
+        <p>Karawang, Jawa Barat.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Creator</h3>
+        <p>Andra Nooryanto</p>
+        <p>Azka Syakira</p>
+        <p>Galih Rizkia Syahlani</p>
+        <p>Kania Wajahni</p>
+        <p>Salsa Halifah</p>
+        <p>Silsi Mustika Dewi</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Kontak</h3>
+        <div class="social-icons">
+          <div class="social-icon">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png"
+              alt="Instagram"
+            />
+            <a
+              href="https://www.instagram.com/smkn3karawang_?igsh=MXQ4NXNmM3NuYmt2cA=="
+              target="_blank"
+              style="color: white; text-decoration: none"
+              >@smkn3karawang_</a
+            >
+          </div>
+          <div class="social-icon">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png"
+              alt="Instagram"
+            />
+            <a
+              href="https://instagram.com/smkn3karawangofficial"
+              style="color: white; text-decoration: none"
+              >@smkn3karawangofficial</a
+            >
+          </div>
+          <div class="social-icon">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+              alt="Facebook"
+            />
+            <a
+              href="https://facebook.com"
+              style="color: white; text-decoration: none"
+              >SMKN 3 Karawang</a
+            >
+          </div>
+          <div class="social-icon">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/725/725643.png"
+              alt="Phone"
+            />
+            <span>(0267) 8616055</span>
+          </div>
+          <div class="social-icon">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/725/725643.png"
+              alt="Email"
+            />
+            <a
+              href="mailto:smkn3krw@yahoo.co.id"
+              style="color: white; text-decoration: none"
+              >smkn3krw@yahoo.co.id</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>©2025 SMKN 3 Karawang's Official Website</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .carousel {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    min-width: 100%;
+    display: flex;
+    background: white;
+  }
+
+  .slide img {
+    width: 50%;
+    object-fit: cover;
+  }
+
+  .slide-content {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .slide-content h2 {
+    margin: 0 0 15px;
+  }
+
+  .slide-content p {
+    margin: 0 0 20px;
+    color: #444;
+  }
+
+  .btn {
+    background: #007bff;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    width: fit-content;
+  }
+
+  /* tombol panah */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .carousel-btn.left {
+    left: 15px;
+  }
+  .carousel-btn.right {
+    right: 15px;
+  }
+
+  /* indikator */
+  .carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+  }
+
+  .indicator {
+    width: 12px;
+    height: 12px;
+    background: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .indicator.active {
+    background: #007bff;
+  }
+</style>
+
+
