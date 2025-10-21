@@ -138,7 +138,7 @@ body {
 
 .hero {
   background: linear-gradient(rgba(0, 65, 135, 0.753), rgba(23, 98, 179, 0.226)),
-    url("/image/pexels-njeromin-15036815.jpg") no-repeat center center;
+    url("image/pexels-njeromin-15036815.jpg") no-repeat center center;
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -516,7 +516,7 @@ footer {
   position: relative;
   width: 100%;
   min-height: 100vh; /* biar full tinggi layar */
-  background: url("/image/visimisi.png") no-repeat center center;
+  background: url("image/visimisi.png") no-repeat center center;
   background-size: cover; /* biar gambar nutup full */
   display: flex;
   justify-content: center;
@@ -810,24 +810,25 @@ tr:hover {
 }
 
 .tjkt-desc {
-    background-image: url('/image/backgroundnetika.jpg');
+    background-image: url('image/backgroundnetika.jpg');
     background-size: cover;
     background-position: center;
     padding: 60px;
 }
 
 .tjkt-lab {
-    background-image: url('/image/backgroundnetika.jpg');
+    background-image: url('image/backgroundnetika.jpg');
     background-size: cover;
     background-position: center;
     padding: 60px;
 }
 
 .tjkt-staff {
-    background-image: url('/image/backgroundnetika.jpg');
+    background-image: url('image/backgroundnetika.jpg');
     background-size: cover;
     background-position: center;
     padding: 60px;
 }
+
 
 
