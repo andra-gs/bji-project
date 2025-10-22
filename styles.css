@@ -830,5 +830,58 @@ tr:hover {
     padding: 60px;
 }
 
+.mpk-section {
+  background-image: url('background.png'); /* Ganti dengan background kamu */
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  color: #000;
+  font-family: "Times New Roman", serif;
+}
+
+.mpk-container {
+  max-width: 800px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.mpk-text h2 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.mpk-text h3 {
+  font-size: 22px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.mpk-text p, .mpk-text li {
+  line-height: 1.6;
+}
+
+.mpk-text ul {
+  margin: 10px 0 20px 30px;
+}
+
+.mpk-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.mpk-images img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+
 
 
