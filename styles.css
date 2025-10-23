@@ -831,8 +831,8 @@ tr:hover {
 }
 
 .mpk-section {
-  background-image: url('background.png'); /* Ganti dengan background kamu */
-  background-size: cover;
+  background-image: url('../image/backgroundnetika.jpg'); /* Ganti dengan background kamu */
+  background-size: auto;
   background-position: center;
   padding: 60px 20px;
   color: #000;
@@ -881,6 +881,7 @@ tr:hover {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
 
 
 
