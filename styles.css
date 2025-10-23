@@ -144,7 +144,6 @@ body {
   display: flex;
   align-items: center;
   padding: 0 2rem;
-  max-width: 1400px;
   margin: 0 auto;
   position: relative;
 }
@@ -832,17 +831,17 @@ tr:hover {
 
 .mpk-section {
   background-image: url('../image/backgroundnetika.jpg'); /* Ganti dengan background kamu */
-  background-size: auto;
+  background-size: cover;
   background-position: center;
   padding: 60px 20px;
-  color: #000;
+  color: #000000;
   font-family: "Times New Roman", serif;
 }
 
 .mpk-container {
-  max-width: 800px;
+  max-width: unset;
   margin: auto;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.37);
   padding: 40px;
   border-radius: 10px;
 }
@@ -878,10 +877,9 @@ tr:hover {
   width: 250px;
   height: 250px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
-
 
 
 
