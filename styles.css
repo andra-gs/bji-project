@@ -697,6 +697,8 @@ footer {
 .poster h2 {
   padding: 10px;
   font-size: 1.1rem;
+  text-decoration: none;
+  color: black;
 }
 
 .poster a {
@@ -885,6 +887,7 @@ tr:hover {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
 
 
 
