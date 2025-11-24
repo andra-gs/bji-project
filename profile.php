@@ -1,6 +1,11 @@
 <?php
 session_start();
 $user = $_SESSION["user"] ?? null;
+
+// Jika user sudah login, set session bahwa dia sudah login dari halaman profil
+if ($user) {
+    $_SESSION["profil_logged"] = true;
+}
 ?>
 
 <!DOCTYPE html>
