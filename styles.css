@@ -888,11 +888,271 @@ tr:hover {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
+/* ---------------------------
+   STYLING HALAMAN PROFILE
+   --------------------------- */
 
+   body {
+    background: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+.profile-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
 
+.profile-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 25px 30px;
+    border-radius: 12px;
+    border: 1px solid #dedede;
+}
 
+.profile-card h3 {
+    font-weight: 700;
+    color: #333;
+}
 
+.list-group-item {
+    font-size: 16px;
+}
 
+.btn {
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 16px;
+}
 
+.admin-btn {
+    width: 70%;
+    font-weight: 600;
+}
 
+@media(max-width: 480px) {
+    .profile-card {
+        padding: 20px;
+    }
+    .admin-btn {
+        width: 100%;
+    }
+}
+
+/* ==========================
+   STYLING HALAMAN ASPIRASI
+   ========================== */
+
+  /* ============================================
+    GLOBAL BODY LAYOUT
+============================================ */
+body.center-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #b3c4ff, #e8ecff, #ffffff);
+  font-family: "Poppins", sans-serif;
+}
+
+/* ============================================
+  CARD UTAMA ASPIRASI
+============================================ */
+.aspirasi-wrapper {
+  background: #ffffff;
+  width: 90%;
+  max-width: 520px;
+  padding: 40px 35px;
+  border-radius: 20px;
+  box-shadow: 
+      0px 10px 25px rgba(0,0,0,0.08),
+      0px 5px 10px rgba(0,0,0,0.06);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.asp-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #3f3d56;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.asp-subtitle {
+  font-size: 15px;
+  text-align: center;
+  color: #6c6c6c;
+  margin-bottom: 25px;
+}
+
+/* ============================================
+  FLOATING LABEL INPUT
+============================================ */
+.floating-label {
+  position: relative;
+  width: 100%;
+}
+
+.floating-label textarea {
+  width: 100%;
+  min-height: 150px;
+  border-radius: 14px;
+  border: 2px solid #dcdcdc;
+  padding: 14px;
+  font-size: 15px;
+  resize: vertical;
+  outline: none;
+  transition: 0.3s ease;
+  background: #fafafa;
+}
+
+.floating-label textarea:focus {
+  border-color: #4e73ff;
+  background: #ffffff;
+  box-shadow: 0 0 8px rgba(78, 115, 255, 0.2);
+}
+
+.floating-label label {
+  position: absolute;
+  left: 18px;
+  top: 14px;
+  color: #999;
+  font-size: 15px;
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+
+.floating-label textarea:focus + label,
+.floating-label textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 14px;
+  background: #ffffff;
+  padding: 0 6px;
+  font-size: 12px;
+  color: #4e73ff;
+}
+
+/* ============================================
+  BUTTON
+============================================ */
+.asp-button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4e73ff, #2f52ff);
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0px 8px 18px rgba(78, 115, 255, 0.35);
+}
+
+.asp-button:hover {
+  background: linear-gradient(135deg, #385cff, #1f3cdf);
+  box-shadow: 0px 6px 14px rgba(78, 115, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+  ACCESS DENIED
+============================================ */
+.denied-box {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 380px;
+  width: 90%;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
+  animation: fadeIn 0.4s ease;
+}
+
+.denied-box h2 {
+  margin-bottom: 10px;
+  color: #d9534f;
+}
+
+/* ============================================
+  ANIMATIONS
+============================================ */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* ============================
+   SUCCESS MESSAGE PAGE
+============================ */
+.success-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 18px;
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 
+      0px 12px 28px rgba(0,0,0,0.12),
+      0px 4px 12px rgba(0,0,0,0.08);
+  animation: fadeIn 0.45s ease-in-out;
+}
+
+.success-icon {
+  width: 85px;
+  height: 85px;
+  margin: 0 auto 18px;
+  background: #4ade80;
+  color: white;
+  font-size: 48px;
+  line-height: 85px;
+  border-radius: 50%;
+  box-shadow: 0px 6px 15px rgba(74, 222, 128, 0.4);
+  animation: pop 0.4s ease;
+}
+
+.success-card h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #363636;
+}
+
+.success-card p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.back-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #4e73ff;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #2f52ff;
+  box-shadow: 0px 5px 15px rgba(78,115,255,0.3);
+  transform: translateY(-2px);
+}
+
+@keyframes pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
