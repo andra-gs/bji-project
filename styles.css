@@ -138,7 +138,7 @@ body {
 
 .hero {
   background: linear-gradient(rgba(0, 65, 135, 0.753), rgba(23, 98, 179, 0.226)),
-    url("image/pexels-njeromin-15036815.jpg") no-repeat center center;
+    url("image/sekolah.jpg") no-repeat center center;
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -1156,3 +1156,4 @@ body.center-page {
   0% { transform: scale(0.5); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
+
